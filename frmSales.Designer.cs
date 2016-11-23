@@ -54,19 +54,21 @@
             this.datBegin.Size = new System.Drawing.Size(85, 20);
             this.datBegin.TabIndex = 0;
             this.datBegin.Value = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
+            this.datBegin.ValueChanged += new System.EventHandler(this.datBegin_ValueChanged);
             // 
             // datEnd
             // 
             this.datEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datEnd.Location = new System.Drawing.Point(84, 45);
+            this.datEnd.Location = new System.Drawing.Point(265, 19);
             this.datEnd.Name = "datEnd";
             this.datEnd.Size = new System.Drawing.Size(85, 20);
             this.datEnd.TabIndex = 0;
+            this.datEnd.ValueChanged += new System.EventHandler(this.datEnd_ValueChanged);
             // 
             // cmdCompName
             // 
             this.cmdCompName.FormattingEnabled = true;
-            this.cmdCompName.Location = new System.Drawing.Point(70, 34);
+            this.cmdCompName.Location = new System.Drawing.Point(70, 33);
             this.cmdCompName.Name = "cmdCompName";
             this.cmdCompName.Size = new System.Drawing.Size(85, 21);
             this.cmdCompName.TabIndex = 1;
@@ -75,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 37);
+            this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 2;
@@ -96,9 +98,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.datBegin);
             this.groupBox1.Controls.Add(this.datEnd);
-            this.groupBox1.Location = new System.Drawing.Point(161, 12);
+            this.groupBox1.Location = new System.Drawing.Point(161, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(182, 76);
+            this.groupBox1.Size = new System.Drawing.Size(365, 52);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Период";
@@ -106,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 51);
+            this.label3.Location = new System.Drawing.Point(188, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -126,12 +128,12 @@
             this.colPrice,
             this.colAmount});
             this.gridSales.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridSales.Location = new System.Drawing.Point(12, 94);
+            this.gridSales.Location = new System.Drawing.Point(12, 77);
             this.gridSales.MultiSelect = false;
             this.gridSales.Name = "gridSales";
             this.gridSales.RowHeadersVisible = false;
             this.gridSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSales.Size = new System.Drawing.Size(755, 353);
+            this.gridSales.Size = new System.Drawing.Size(755, 551);
             this.gridSales.TabIndex = 4;
             // 
             // colTime
@@ -175,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 458);
+            this.ClientSize = new System.Drawing.Size(779, 654);
             this.Controls.Add(this.gridSales);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
