@@ -91,6 +91,8 @@
             this.timerBaloon = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.timerReloadServ = new System.Windows.Forms.Timer(this.components);
+            this.продажиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.списокПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridAddresses)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -280,9 +282,10 @@
             this.toolStripMenuItemPing,
             this.uTMToolStripMenuItem,
             this.ultraVNCToolStripMenuItem,
-            this.обновитьСписокПланшетовToolStripMenuItem});
+            this.обновитьСписокПланшетовToolStripMenuItem,
+            this.списокПродажToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(264, 186);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(264, 230);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // deleteToolStripMenuItem
@@ -553,7 +556,8 @@
             // 
             this.утилитыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.зарегистрироватьПланшетToolStripMenuItem,
-            this.выгрузитьВExcellToolStripMenuItem});
+            this.выгрузитьВExcellToolStripMenuItem,
+            this.продажиToolStripMenuItem});
             this.утилитыToolStripMenuItem.Name = "утилитыToolStripMenuItem";
             this.утилитыToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.утилитыToolStripMenuItem.Text = "Сервис";
@@ -668,6 +672,20 @@
             this.timerReloadServ.Interval = 1800000;
             this.timerReloadServ.Tick += new System.EventHandler(this.timerReloadServ_Tick);
             // 
+            // продажиToolStripMenuItem
+            // 
+            this.продажиToolStripMenuItem.Name = "продажиToolStripMenuItem";
+            this.продажиToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.продажиToolStripMenuItem.Text = "Продажи";
+            this.продажиToolStripMenuItem.Click += new System.EventHandler(this.продажиToolStripMenuItem_Click);
+            // 
+            // списокПродажToolStripMenuItem
+            // 
+            this.списокПродажToolStripMenuItem.Name = "списокПродажToolStripMenuItem";
+            this.списокПродажToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.списокПродажToolStripMenuItem.Text = "Список продаж";
+            this.списокПродажToolStripMenuItem.Click += new System.EventHandler(this.списокПродажToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,6 +787,8 @@
         private System.Windows.Forms.ToolStripMenuItem утилитыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem зарегистрироватьПланшетToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выгрузитьВExcellToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem продажиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem списокПродажToolStripMenuItem;
     }
 }
 

@@ -1034,57 +1034,7 @@ namespace Pinger
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //var url = "http://10.8.0.44:8080/";
-            //var result = Parser(url);
-            //MessageBox.Show("Версия: " + result[0] + Environment.NewLine +
-            //    "PKI: " + result[1] + Environment.NewLine +
-            //    "ГОСТ: " + result[2]);
-            //int month; ;
-            //var date = gridAddresses[7, 0].Value.ToString();
-            //date = date.Replace("-", ".");
-            //month = DateTime.Parse(date).Month;
-            //MessageBox.Show("Месяц: " + month.ToString("MMMM"));
-            //foreach (DataGridViewRow item in gridAddresses.Rows)
-            //{
-            //    gridAddresses[5, item.Index].Value = "8080";
-            //}
-            //SQL();  
-            //getCompNames();
-            //OracleConnection connect = new OracleConnection(Properties.Settings.Default.Connection);
-            //System.Data.DataTable result = new System.Data.DataTable();
-            //try
-            //{
-            //    connect.Open();
-            //    string query = "select description from EXTERNAL.EGAIS_ES_POS_LIST where description like '%3282%' or description = 'mavt2999'";
-            //    OracleCommand command = new OracleCommand(query, connect);
-            //    OracleDataAdapter adapter = new OracleDataAdapter(command);
-            //    adapter.Fill(result);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Произошла ошибка при подключении к базе данных", "Ошибка БД", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    log.Error(ex);
-            //}
-            //finally
-            //{
-            //    if (connect.State != ConnectionState.Closed)
-            //        connect.Close();
-            //}
-            //string str = "";
-            //string res="";
-            //for (var i = 0; i < result.Rows.Count; i++)
-            //{
-            //    str = result.Rows[i][0].ToString();
-            //    foreach (var item in str)
-            //    {
-            //        res = res + item.GetHashCode().ToString() + Environment.NewLine;
-            //    }
-            //    res = res + Environment.NewLine;
-            //}
-            //MessageBox.Show(res);   
-            DateTime sync = DateTime.Parse(gridAddresses[11, 35].EditedFormattedValue.ToString());
-            TimeSpan raznica = DateTime.Now - sync;
-            MessageBox.Show(DateTime.Now.ToString()+" - "+ sync.ToString() + " = "+raznica.Days.ToString());
+
         }
 
         private void timerBaloon_Tick(object sender, EventArgs e)
@@ -1257,6 +1207,21 @@ namespace Pinger
             frmReg f = new frmReg();
             f.Owner = this;
             f.ShowDialog();
+        }
+
+        private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSales f = new frmSales();
+            f.Owner = this;
+            f.Show();
+        }
+
+        private void списокПродажToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSales f = new frmSales();
+            f.Owner = this;
+            f.description = gridAddresses[1, gridAddresses.CurrentRow.Index].Value.ToString().ToLower();
+            f.Show();
         }
     }
 }
